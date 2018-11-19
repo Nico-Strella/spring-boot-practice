@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.packt.microservices.entity.Trabajo;
+import com.packt.microservices.entity.Usuario;
 import com.packt.microservices.service.IUsuarioService;
 
 @RestController
@@ -27,8 +28,8 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("{id}")
-	public ResponseEntity<String> test(@PathVariable("id") Integer id){
-		String test = "esto es un test";
-		return new ResponseEntity<String>(test, HttpStatus.OK);
+	public ResponseEntity<Usuario> getUsuario(@PathVariable("id") Integer id){
+		Usuario user = usuarioService.getUsuario(id);
+		return new ResponseEntity<Usuario>(user, HttpStatus.OK);
 	}
 }

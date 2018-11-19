@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.packt.microservices.dao.IUsuarioDAO;
 import com.packt.microservices.entity.Trabajo;
+import com.packt.microservices.entity.Usuario;
 
 @Service
 public class UsuarioService implements IUsuarioService{
@@ -18,4 +19,11 @@ public class UsuarioService implements IUsuarioService{
 	public List<Trabajo> getTrabajosEnviados(Integer id) {
 		return usuarioDAO.findAllTrabajosEnInvestigacionEnviados(id);
 	}
+
+	@Override
+	public Usuario getUsuario(Integer id) {
+		return usuarioDAO.finbById(id);
+	}
+	
+	
 }
