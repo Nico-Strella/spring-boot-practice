@@ -1,4 +1,4 @@
-package com.packt.microservices.usuario;
+package com.packt.microservices.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

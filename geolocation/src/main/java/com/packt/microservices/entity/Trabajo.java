@@ -1,4 +1,4 @@
-package com.packt.microservices.usuario;
+package com.packt.microservices.entity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,7 +19,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.packt.microservices.usuario.Usuario;
 
 @Entity
 @Table(name="trabajo")
